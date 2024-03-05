@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-nginx
-  namespace: nginx
+  name: web-app-flask
+  namespace: app
   labels:
     course: clo835
-    week: week5
+    week: as2
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      name: nginx-pod
+      name: web-app-flask
   template:
     metadata:
       labels:
-        name: nginx-pod
+        name: web-app-flask
     spec:
       containers:
-      - name: nginx-container
-        image: nginx
+      - name: web-app-flask
+        image: 877646386798.dkr.ecr.us-east-1.amazonaws.com/clo835-assignment2:app
         # httpd:2.4-alpine
