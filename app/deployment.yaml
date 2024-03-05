@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app-flask
+  namespace: app
+  labels:
+    course: clo835
+    week: as2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: web-app-flask
+  template:
+    metadata:
+      labels:
+        name: web-app-flask
+    spec:
+      containers:
+      - name: web-app-flask
+        image: 877646386798.dkr.ecr.us-east-1.amazonaws.com/clo835-assignment2:app
+      

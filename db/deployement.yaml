@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-app-flask
+  name: mysql
   namespace: app
   labels:
     course: clo835
@@ -11,13 +11,13 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      name: web-app-flask
+      name: mysql
   template:
     metadata:
       labels:
-        name: web-app-flask
+        name: mysql
     spec:
       containers:
-      - name: web-app-flask
-        image: 877646386798.dkr.ecr.us-east-1.amazonaws.com/clo835-assignment2:app
-        # httpd:2.4-alpine
+      - name: mysql
+        image: 877646386798.dkr.ecr.us-east-1.amazonaws.com/clo835-assignment2:db
+   
