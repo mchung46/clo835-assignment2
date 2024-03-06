@@ -5,8 +5,8 @@ metadata:
   name: web-app
   namespace: webapp
   labels:
-    course: clo835
-    week: as2
+    app: employees
+    version: v1
 spec:
   replicas: 1
   selector:
