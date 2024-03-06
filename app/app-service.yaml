@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-app-svc
+  namespace: webapp
+  labels:
+    course: clo835
+    week: as2
+spec:
+  selector:
+    app: web-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30001
+  type: NodePort
