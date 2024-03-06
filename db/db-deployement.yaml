@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: sqldb
+  labels:
+    course: clo835
+    week: as2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: mysql
+  template:
+    metadata:
+      labels:
+        name: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: 877646386798.dkr.ecr.us-east-1.amazonaws.com/clo835-assignment2:db
+        env:
+          - name: MYSQL_ROOT_USER
+            value: "root"
+          - name: MYSQL_ROOT_PASSWORD
+            value: "pw"
+        ports:
+          - containerPort: 3306
+        imagePullPolicy: Always
