@@ -1,12 +1,10 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql
   namespace: sqldb
   labels:
-    course: clo835
-    week: as2
+    app: mysql
 spec:
   replicas: 1
   selector:
