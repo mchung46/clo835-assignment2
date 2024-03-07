@@ -4,14 +4,15 @@ metadata:
   name: web-app-svc
   namespace: webapp
   labels:
-    course: clo835
-    week: as2
+    app: employees
+    version: v1
 spec:
-  selector:
-    app: web-app
+  type: NodePort
   ports:
     - protocol: TCP
       port: 8080
       targetPort: 8080
-      nodePort: 30001
-  type: NodePort
+      nodePort: 30000
+  selector:
+    app: employees
+  
