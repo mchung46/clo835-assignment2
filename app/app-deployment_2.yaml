@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: 877646386798.dkr.ecr.us-east-1.amazonaws.com/clo835-assignment2:app
+        image: 877646386798.dkr.ecr.us-east-1.amazonaws.com/clo835-assignment2:appv2
         env:
           - name: DBHOST
             value: "mysql-svc.sqldb.svc.cluster.local"
