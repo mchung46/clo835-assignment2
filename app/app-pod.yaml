@@ -9,7 +9,7 @@ spec:
     image: 877646386798.dkr.ecr.us-east-1.amazonaws.com/clo835-assignment2:app
     env:
       - name: DBHOST
-        value: "mysql-svc.sqldb.svc.cluster.local"
+        value: "10.244.0.25"
       - name: DBPORT
         value: "3306"
       - name: DBUSER

@@ -14,4 +14,4 @@ spec:
       targetPort: 8080
       nodePort: 30000
   selector:
-    name: web-app
+    app: employees
